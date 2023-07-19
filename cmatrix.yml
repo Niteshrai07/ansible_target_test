@@ -8,5 +8,5 @@
   tasks: 
     - name: install apache2
       apt: 
-        name: cmatrix
+        name: apache2
         state: present
