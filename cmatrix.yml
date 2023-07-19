@@ -1,0 +1,12 @@
+---
+- name: testplaybook
+  hosts: all
+  remote_user: root
+  become: yes
+  gather_facts: yes
+
+  tasks: 
+    - name: install cmatrix
+      apt: 
+        name: cmatrix
+        state: present
