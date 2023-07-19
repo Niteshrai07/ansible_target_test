@@ -6,7 +6,7 @@
   gather_facts: yes
 
   tasks: 
-    - name: install cmatrix
+    - name: install apache2
       apt: 
         name: cmatrix
         state: present
