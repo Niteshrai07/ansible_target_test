@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - debug: msg="{{ lookup('first_found', dict(files=['test-ini.conf'], skip=true)) | ternary(lookup('ini', 'foo section=DEFAULT file=test-ini.conf'), omit) }}"
