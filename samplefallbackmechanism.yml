@@ -1,0 +1,33 @@
+- name: Example playbook with rescue
+
+  hosts: your_target_hosts
+
+  gather_facts: yes
+
+  tasks:
+
+    - name: Task 1 in block
+
+      block:
+
+        - name: Failed SC task
+
+          command: your_command_here
+
+        - name: Failed C task
+
+          command: your_command_here
+
+      rescue:
+
+        - name: Fallback to failed SC task
+
+          debug:
+
+            msg: "Sending for  manual intervention"
+
+        - name: Fallback to C task
+
+          debug:
+
+            msg: "sendig for Manual Intervention"\
