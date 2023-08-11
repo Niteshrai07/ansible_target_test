@@ -1,24 +1,13 @@
----
-# Database Log Fetching Configuration
+log_database:
+  host: log_db_host
+  port: log_db_port
+  username: log_db_username
+  password: log_db_password
+  database_name: log_db_name
 
-# Specify the database connection details
-database:
-  host: your_database_host
-  port: your_database_port
-  username: your_username
-  password: your_password
-  database: your_database_name
- 
-
-# Specify the query to fetch logs
-query: >
-  SELECT timestamp, log_message
-  FROM logs
-  WHERE timestamp >= '2023-08-01' AND timestamp <= '2023-08-10'
-  ORDER BY timestamp;
-
-# Specify the output destination for fetched logs (e.g., save to a file, print to console)
-output:
-  type: file
-  path: /path/to/fetched_logs.log
-  format: text
+log_table:
+  table_name: logs
+  fields:
+    - timestamp
+    - variable_name
+    - variable_value
