@@ -1,13 +1,32 @@
-log_database:
-  host: log_db_host
-  port: log_db_port
-  username: log_db_username
-  password: log_db_password
-  database_name: log_db_name
-
+database:
+  driver: mysql
+  host: 
+  port: 
+  username: 
+  password: 
+  database_name: 
 log_table:
   table_name: logs
   fields:
-    - timestamp
-    - variable_name
-    - variable_value
+    - name: id
+      type: INT
+      constraints: "AUTO_INCREMENT PRIMARY KEY"
+    - name: incident_name
+      type: VARCHAR(255)
+      constraints: "NOT NULL"
+    - name: assigned_to
+      type: VARCHAR(255)
+    - name: error_message_description
+      type: TEXT
+    - name: timestamp
+      type: TIMESTAMP
+      default: "CURRENT_TIMESTAMP"
+
+log_entries:
+  - incident_name: Incident A
+    assigned_to: User A
+    error_message_description: An error occurred in Module X
+
+  - incident_name: Incident B
+    assigned_to: User B
+    error_message_description: Error in Module Y
