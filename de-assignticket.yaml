@@ -1,40 +1,25 @@
 - name: De-assign task
-
   hosts: localhost
 
   tasks:
-
     - name: De-assign ticket
 
       uri:
-
         - name: Deassing tasks from given
-
           url: "{{ servicenow_api_url }}/api/now/table/incident/{{ ticket_number }}"
-
           method: PATCH
-
           user: "{{ servicenow_username }}"
-
           password: "{{ servicenow_password }}"
-
           force_basic_auth: yes
 
           headers:
-
             Content-Type: "application/json"
-
           body_format: json
-
           body: |
-
             {
-
               "assigned_to": "",
-
               "state": "1"  # Update state as needed
-
-            }
+              }
 
           register: result
 
