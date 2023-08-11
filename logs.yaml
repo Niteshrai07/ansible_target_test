@@ -27,6 +27,4 @@ log_entries:
     assigned_to: User A
     error_message_description: An error occurred in Module X
 
-  - incident_name: Incident B
-    assigned_to: User B
-    error_message_description: Error in Module Y
+ 
