@@ -25,7 +25,7 @@
         login_password: "IRONMAN"
         #login_db: Ansible
         login_db: cat
-        query: "INSERT INTO `logTable` (`id`, `Incident-Name`, `Assigned-to`, `Error-Message-Description`) VALUES ('3', 'INC456', 'Nitesh2', 'Error-message');"
+        query: "INSERT INTO `logTable` (`id`, `Incident-Name`, `Assigned-to`, `Error-Message-Description`) VALUES ('3', 'INC4587 'Niteshrai', 'Error-message failure');"
       register: query_result
 
     - name: Debug Query Result
